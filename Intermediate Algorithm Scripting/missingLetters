@@ -1,0 +1,23 @@
+function fearNotLetter(str) {
+  var myArray = [];
+  var output = 0;
+  for(var i=0; i < str.length; i++)
+    {
+      myArray.push(str.charCodeAt(i));
+    }
+  for(var j = 0; j < myArray.length-1; j++)
+   {
+     if(myArray[j]+1 !== myArray[j+1])
+       {
+         output = myArray[j]+1;
+         return String.fromCharCode(output);
+       }
+     else{
+       output = undefined;
+     }
+   
+   }
+  return output;
+}
+
+fearNotLetter("abce");
