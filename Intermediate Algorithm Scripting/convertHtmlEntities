@@ -1,0 +1,7 @@
+function convert(str) {
+  // &colon;&rpar;
+  var myStr = str.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&apos;");
+  return myStr;
+}
+
+convert("Hamburgers < Pizza < Tacos");
