@@ -1,0 +1,15 @@
+function every(collection, pre) {
+  // Is everyone being true?
+  var toggle = true;
+  
+var test = collection.forEach(function(myObject){
+    
+    if(myObject.hasOwnProperty(pre) === false || Boolean(myObject[pre]) == false)
+      { 
+        toggle = false;
+      }
+  });
+  return toggle;
+}
+
+every([{"single": "double"}, {"single": NaN}], "single")
